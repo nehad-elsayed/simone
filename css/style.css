@@ -11,6 +11,8 @@
     line-height: 1.4;
 }
 
+
+
 *::selection {
 
     color: white;
@@ -110,7 +112,7 @@ h2 {
     height: 3.75rem;
     display: flex;
     align-items: center;
-
+    padding-inline: 1.25rem;
 }
 
 .nav #menu-1 {
@@ -444,7 +446,7 @@ h2 {
     width: 3.125rem;
     padding: 20px 35px;
     margin-inline: 15px;
-    box-shadow: .0625rem .125rem .3125rem .25rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 5px 2px rgb(0 0 0 / 23%);
     border-radius: .3125rem;
     /* flex-shrink: 0; */
 }
@@ -1004,12 +1006,24 @@ footer p span:hover {
 
 /************ media screen  ************8888888888*/
 
+@media (min-width: 350px) {
+
+    .container {
+
+        width: 300px;
+    }
+
+
+}
+
+
 @media (min-width: 450px) {
 
     .container {
 
         width: 400px;
     }
+
 }
 
 
