@@ -1,0 +1,1317 @@
+/**************** start global ***************/
+
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    line-height: 1.4;
+}
+
+*::selection {
+
+    color: white;
+    background-color: var(--main-color);
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 7px;
+    background-color: #888888a8;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 10px;
+
+}
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    height: 100%;
+    width: 100%;
+    color: #333;
+}
+
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+:root {
+    --main-color: rgb(32, 201, 151);
+    --primary-color: #dddddd60;
+    --main-margin: 50px;
+}
+
+.container {
+
+    width: 100%;
+    margin: auto;
+    padding: 1.6px;
+}
+
+/**********GLOBAL HEADER************/
+.header {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block: 50px;
+    font-size: 1.875rem;
+    text-align: center;
+}
+
+.header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -0.375rem;
+    left: 25%;
+    width: 7.5rem;
+    height: .125rem;
+    background-color: var(--main-color);
+}
+
+.header p {
+
+    font-size: 10rem;
+    color: rgba(0, 0, 0, 0.066);
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+
+h2 {
+    font-size: 3rem;
+    position: absolute;
+
+}
+
+
+/************* Start Nav  *******************/
+
+.nav {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    background-color: black;
+    color: white;
+    top: 0;
+    left: 0;
+    height: 3.75rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.nav #menu-1 {
+    display: none;
+}
+
+.nav label {
+    margin-left: auto;
+    display: none;
+}
+
+.nav .container {
+    display: flex;
+    align-items: center;
+
+}
+
+.nav .menu {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin: auto;
+}
+
+.nav .menu li a {
+    transition: color 0.7s;
+}
+
+.nav .menu li a:hover {
+
+    color: var(--main-color);
+
+}
+
+/************* end Nav  *******************/
+/************* Start home  *******************/
+
+#home {
+
+    background: linear-gradient(rgba(0, 0, 0, 0.612) 0% 100%), url(../imgs/home.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+#home .fixed {
+
+    position: fixed;
+    z-index: 99;
+    top: 388px;
+    right: 0;
+    color: white;
+    background-color: #333;
+    width: 3.125rem;
+    padding: 5px;
+    text-align: center;
+    font-size: 1.875rem;
+}
+
+#home .container {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+
+}
+
+#home .container .text {
+    text-align: center;
+    margin-block: auto;
+    font-size: 30px;
+
+}
+
+#home h1 {
+    position: relative;
+}
+
+#home .container .text h1::after {
+    content: '';
+    animation: change-word 4.5s infinite linear;
+}
+
+
+@keyframes change-word {
+
+    0% {
+        content: 'D|';
+    }
+
+    6% {
+        content: 'De|';
+    }
+
+    12% {
+        content: 'Des|';
+    }
+
+    20% {
+        content: 'Desi|';
+    }
+
+    26% {
+        content: 'Desig|';
+    }
+
+    32% {
+        content: 'Design|';
+    }
+
+    38% {
+        content: 'Designe|';
+    }
+
+    44% {
+        content: 'Designer|';
+    }
+
+    50% {
+        content: 'Designe|';
+    }
+
+    56% {
+        content: 'Design|';
+    }
+
+    72% {
+        content: 'Desig|';
+    }
+
+    78% {
+        content: 'Desi|';
+    }
+
+    84% {
+        content: 'Des|';
+    }
+
+    90% {
+        content: 'De|';
+    }
+
+    96% {
+        content: 'D|';
+    }
+
+    100% {
+        content: '|';
+    }
+
+}
+
+
+#home .container .text button {
+
+    font-size: 30px;
+    color: var(--main-color);
+    background-color: transparent;
+    border: 2px solid var(--main-color);
+    padding-block: 10px;
+    padding-inline: 36px;
+    margin-block: 10px;
+    border-radius: 2.5rem;
+    transition: color 0.7s, background-color 0.7s;
+}
+
+#home .container .text button:hover {
+    cursor: pointer;
+    color: white;
+    background-color: var(--main-color);
+}
+
+#home .container .down {
+
+    font-size: 30px;
+    position: relative;
+    animation: move 1s infinite linear;
+}
+
+@keyframes move {
+    0% {
+        bottom: 1.875rem;
+        opacity: 0;
+    }
+
+
+
+    100% {
+        bottom: 0;
+        opacity: 1;
+
+    }
+}
+
+/************* End Home  *******************/
+/************* Start About  *******************/
+.about {
+    margin-block: var(--main-margin);
+}
+
+.about .content {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about .content .text {
+
+    width: calc(70% - 1.875rem);
+}
+
+.about .content .form {
+    width: 30%;
+}
+
+.about .content .text h3 {
+    font-size: 30px;
+}
+
+.about .content .text h3 span {
+
+    color: var(--main-color);
+}
+
+.about .content .text p {
+
+    padding-block: 10px;
+}
+
+.about .content .form ul li {
+
+    padding-block: 15px;
+}
+
+.about .content .form ul li:not(:last-child) {
+
+    border-bottom: .0625rem dashed #0000005f;
+}
+
+.about .content .form ul li span {
+    font-weight: 900;
+}
+
+.about .content .form button {
+
+    padding: 15px 35px;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 3.25rem;
+    transition: background-color 0.7s;
+    margin-block: 10px;
+}
+
+.about .content .form button a {
+
+    color: white;
+    font-size: 20px;
+}
+
+.about .content .form button:hover {
+    cursor: pointer;
+    background-color: rgb(6, 101, 69);
+}
+
+
+.about .rating {
+    margin-block: 1.5625rem;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 25px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .rating .item {
+    padding: .9375rem 1.25rem;
+    text-align: center;
+    font-size: 20px;
+    opacity: 0.5;
+    width: calc((100% - 30px) / 4);
+
+}
+
+.about .rating .item:not(:last-child) {
+
+    border-right: .0625rem dashed rgba(0, 0, 0, 0.492);
+}
+
+.about .rating .item h4 {
+
+    padding-block: 10px;
+}
+
+
+/************* End About  *******************/
+/************* Start what i do  *******************/
+
+.i-do {
+    background-color: var(--primary-color);
+    margin-block: var(--main-margin);
+
+}
+
+.i-do .info {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-block: 30px;
+
+}
+
+.i-do .info .item {
+    padding-block: 10px 5px;
+    flex-basis: calc((100% - 1.25rem) / 2);
+    margin-block: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.i-do .info .item .icon {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 3.125rem;
+    padding: 20px 35px;
+    margin-inline: 15px;
+    box-shadow: .0625rem .125rem .3125rem .25rem rgba(0, 0, 0, 0.15);
+    border-radius: .3125rem;
+    /* flex-shrink: 0; */
+}
+
+.i-do .info .item .icon i {
+
+    font-size: 25px;
+    color: var(--main-color);
+}
+
+.i-do .info .item h4 {
+
+    padding-block: 10px;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+/************* End what i do  *******************/
+/************* Start Resume *******************/
+.resume {
+
+    margin-block: var(--main-margin);
+}
+
+.resume .resume-menu {
+
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    justify-content: space-between;
+}
+
+.resume .item {
+
+    width: calc((100% - 2.1875rem) / 2);
+    border: .0625rem solid rgba(0, 0, 0, 0.108);
+    padding: 15px 20px;
+    border-radius: .3125rem;
+}
+
+.resume .item span {
+    display: inline-block;
+    padding: 5px 10px;
+    color: white;
+    background-color: var(--main-color);
+    border-radius: .3125rem;
+    margin-bottom: 5px;
+}
+
+.resume .item .red {
+    color: red;
+    font-size: 15px;
+    padding-block: 15px;
+}
+
+.resume .skills {
+
+    text-align: center;
+}
+
+.resume .skills h4 {
+
+    margin-top: 1.5625rem;
+    font-size: 1.875rem;
+}
+
+.resume .skills-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+.resume .skills-menu .items {
+
+    width: calc((100% - 1.875rem) / 2);
+    margin-block: 15px;
+
+}
+
+.resume .skills-menu .items .text {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.resume .skills-menu .items .progress {
+
+    width: 100%;
+    height: .625rem;
+    background-color: #57555529;
+    border-radius: 3.125rem;
+}
+
+.resume .skills-menu .items .progress .inner-progress {
+
+    background-color: var(--main-color);
+}
+
+.one,
+.two,
+.three,
+.four,
+.five,
+.six {
+
+    height: 100%;
+    border-radius: 50px;
+
+}
+
+.resume .skills-menu .items .progress .one {
+
+    width: 65%;
+
+
+}
+
+.resume .skills-menu .items .progress .two {
+
+    width: 95%;
+
+
+}
+
+.resume .skills-menu .items .progress .three {
+
+    width: 80%;
+
+
+}
+
+.resume .skills-menu .items .progress .four {
+
+    width: 70%;
+
+
+}
+
+.resume .skills-menu .items .progress .five {
+
+    width: 60%;
+
+
+}
+
+.resume .skills-menu .items .progress .six {
+
+    width: 99%;
+
+
+}
+
+.resume .skills button {
+    border-radius: 3.125rem;
+    padding: 20px;
+    background-color: white;
+    margin: auto;
+    transition: background-color 0.7s;
+}
+
+.resume .skills button:hover {
+
+    background-color: black;
+    cursor: pointer;
+}
+
+.resume .skills button:hover a {
+
+    color: white;
+}
+
+.resume .skills button a {
+
+    font-size: 30px;
+    color: black;
+    transition: color 0.7s;
+    font-weight: 700;
+}
+
+
+
+/************* End Resume *******************/
+/************* start portfolio *******************/
+
+.portfolio {
+
+    background-color: var(--primary-color);
+    margin-block: var(--main-margin);
+}
+
+
+.portfolio .menu {
+
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    margin-bottom: 3.125rem;
+
+}
+
+.portfolio .menu li {
+    transition: 0.7s;
+}
+
+.portfolio .menu li a {
+
+    font-size: 1.25rem;
+    padding: 1.25rem .9375rem;
+}
+
+
+.portfolio .menu .active {
+
+    color: var(--main-color);
+    position: relative;
+}
+
+.portfolio .menu .active::after {
+
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: var(--main-color);
+    width: 100%;
+    height: 2px;
+}
+
+.portfolio .menu li:hover {
+
+    color: var(--main-color);
+}
+
+.portfolio .gallery {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 1.25rem;
+}
+
+.portfolio .gallery .col {
+
+    width: calc((100% - 20px) / 3);
+
+}
+
+.portfolio .gallery .col .item {
+    margin-bottom: 1.25rem;
+}
+
+
+.portfolio .gallery .col .item .picture {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.portfolio .gallery .col .item .picture img {
+
+    border-radius: 7px;
+    transition: transform 0.5s 0.5s, filter 0.5s;
+
+}
+
+.portfolio .gallery .col .item .picture:hover img {
+
+    transform: scale(1.2);
+    filter: blur(4px);
+
+
+}
+
+
+.portfolio .gallery .col .item .picture .layer {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    row-gap: 5px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.342);
+    color: white;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.portfolio .gallery .col .item .picture:hover .layer {
+
+    opacity: 1;
+}
+
+/************* End portfolio *******************/
+/************* start client *******************/
+
+.client {
+
+    margin-block: var(--main-margin);
+}
+
+.client .content {
+
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1.25rem;
+    padding: 1.875rem;
+    justify-content: space-between;
+
+}
+
+.client .empty {
+
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    outline: 1px solid var(--main-color);
+    outline-offset: 7px;
+    background-color: var(--main-color);
+    margin: auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.client .empty::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 35px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: gray;
+    outline: 1px solid gray;
+    outline-offset: 7px;
+    cursor: pointer;
+}
+
+
+
+
+.client .content .card {
+
+    width: calc((100% - 50px) / 2);
+    background-color: var(--primary-color);
+    padding: .9375rem;
+    border-radius: .625rem;
+}
+
+.client .content .card .head-card {
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .625rem;
+}
+
+
+.client .content .card .pic img {
+
+    width: 100%;
+    border-radius: 50%;
+}
+
+.client .content .head-card p {
+
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.client .card .text {
+
+    padding: 1.5625rem .9375rem;
+}
+
+.client .content .card .icon {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: #ffc100;
+    gap: 5px;
+    padding-inline: .8125rem;
+}
+
+/************* End client *******************/
+/************* start contact *******************/
+
+.contact {
+    margin-block: var(--main-margin);
+    background-color: var(--primary-color);
+}
+
+.contact .content {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: .9375rem;
+
+}
+
+.contact .content .address {
+
+
+    padding: 1.875rem;
+
+}
+
+.contact .content .one {
+    width: 30%;
+}
+
+.contact .content .two {
+
+    width: calc(70% - 1.875rem);
+
+}
+
+.contact .content h3 {
+
+    text-transform: uppercase;
+    padding-block: 1.875rem;
+    font-size: 1.875rem;
+    font-weight: 500;
+}
+
+.contact .content .one p {
+    text-transform: capitalize;
+}
+
+.contact .content .one li {
+
+    padding-block: .625rem;
+}
+
+.contact .content .one i {
+
+    color: var(--main-color);
+    font-size: 1.25rem;
+}
+
+.contact .content .one span {
+
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+
+
+.contact .content .two form {
+
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    justify-content: space-between;
+
+}
+
+.contact .content .two form .inputs {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    justify-content: space-between;
+
+}
+
+
+.contact form .inputs input {
+
+    width: calc((100% - 15px) / 2);
+    padding: 0 1.875rem;
+    height: 50px;
+
+
+}
+
+.contact .content .two form input:focus {
+    outline: 1px solid rgba(0, 0, 0, 0.512);
+}
+
+.contact .content .two form textarea {
+    display: block;
+    width: 100%;
+    resize: both;
+}
+
+.contact .content .two form textarea:focus {
+    outline: 1px solid rgba(0, 0, 0, 0.519);
+}
+
+.contact .content .two form textarea,
+.contact .content .two form input {
+
+    border-radius: 3px;
+    border: 1px solid var(--main-color);
+}
+
+.contact .content .two button {
+
+    border: none;
+    padding: 20px 30px;
+    color: white;
+    background-color: var(--main-color);
+    border-radius: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    margin: 1.25rem auto;
+    box-shadow: -1px -3px 39px -5px rgba(0, 0, 0, 0.63);
+}
+
+.contact .content .two button:hover {
+
+    background-color: rgb(15, 101, 66);
+}
+
+/************* End contact *******************/
+/************* Start Footer *******************/
+
+
+footer .container {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 4rem;
+
+}
+
+footer p span:not(:last-child) {
+
+    border-right: 1px solid rgba(0, 0, 0, 0.485);
+}
+
+footer p span {
+
+    padding-inline: .9375rem;
+    transition: color 0.5s;
+    cursor: pointer;
+}
+
+footer p span:hover {
+    color: var(--main-color);
+}
+
+
+/************* End Footer *******************/
+
+/************ media screen  ************8888888888*/
+
+@media (min-width: 450px) {
+
+    .container {
+
+        width: 400px;
+    }
+}
+
+
+
+@media (min-width: 640px) {
+
+    .container {
+
+        width: 540px;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .container {
+
+        width: 720px;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .container {
+
+        width: 960px;
+    }
+}
+
+
+@media (min-width: 1280px) {
+    .container {
+
+        width: 1140px;
+    }
+}
+
+/**************** media RDW  ****************/
+
+/* @media (max-width:1399.98px) {} */
+@media (max-width:1199.98px) {
+
+    .header p {
+
+        font-size: 7rem;
+    }
+}
+
+@media (max-width:991.98px) {
+
+    .about .content .text,
+
+    .about .content .form {
+
+        width: 100%;
+    }
+
+    .header p {
+
+        font-size: 7rem;
+    }
+
+    .i-do .info .item {
+        flex-basis: 100%;
+    }
+
+    .contact .content .address {
+
+        width: 100%;
+        padding: 1rem;
+
+    }
+
+    .contact .content {
+        flex-wrap: wrap-reverse;
+    }
+
+}
+
+@media (max-width:767.98px) {
+
+    .nav .menu {
+
+        position: absolute;
+        left: 0;
+        top: 100%;
+        background-color: black;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 1s;
+    }
+
+    .nav .menu li a {
+
+        background-color: #726c6cd7;
+        width: 100%;
+        display: inline-block;
+        padding-block: .625rem;
+    }
+
+    .nav label {
+
+        display: block;
+    }
+
+    .nav #menu-1:checked~.menu {
+
+        max-height: 500px;
+
+    }
+
+
+    html {
+        font-size: 13px;
+    }
+
+    #home .container .text {
+
+        font-size: 1.5rem;
+    }
+
+    #home .container .text button {
+
+        font-size: 1.5rem;
+    }
+
+
+    .header p {
+
+        font-size: 5rem;
+    }
+
+    .about .rating .item {
+
+        width: calc((100% - 30px) / 2);
+    }
+
+
+    .about .rating .item:not(:last-child) {
+
+        border-right: none;
+    }
+
+    .about .content .form button a {
+        font-size: 1rem;
+    }
+
+    .about .content .form button {
+
+        margin-block: 20px;
+        padding: 10px 25px;
+    }
+
+    .i-do .info .item {
+
+        flex-direction: column;
+        row-gap: 10px;
+
+    }
+
+    .i-do .info .item h4 {
+
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .resume .item {
+        width: 100%;
+    }
+
+    .resume .skills-menu .items {
+
+        width: 100%;
+    }
+
+    .resume .skills button {
+
+        padding: .625rem;
+    }
+
+    .resume .skills button a {
+
+        font-size: 1.2rem;
+    }
+
+    .resume .skills-menu .items .text span {
+        font-size: 1.2rem;
+    }
+
+    .portfolio .gallery .col {
+
+        width: calc((100% - 20px) / 3);
+
+    }
+
+
+    .client .content .card {
+
+        width: 100%;
+    }
+
+    .contact .content .address {
+
+        width: 100%;
+        padding: 1rem;
+
+    }
+
+    .contact .content {
+        flex-wrap: wrap-reverse;
+    }
+
+    .contact .content .two button {
+
+        padding: 12px 15px;
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width:575.98px) {
+
+    html {
+        font-size: 12px;
+    }
+
+    #home .container .text {
+
+        font-size: 1.5rem;
+    }
+
+    #home .container .text button {
+
+        font-size: 1.5rem;
+    }
+
+    .header p {
+
+        font-size: 4rem;
+    }
+
+
+    .header h2 {
+
+        font-size: 1.5rem;
+    }
+
+
+    .about .rating .item {
+
+        width: 100%;
+        margin-block: 15px;
+
+    }
+
+
+    .about .rating .item:not(:last-child) {
+
+        border-right: none;
+    }
+
+    .about .content .form button {
+
+        margin-block: 20px;
+        padding: 10px 25px;
+    }
+
+    .about .content .form button a {
+        font-size: 1rem;
+    }
+
+    .i-do .info .item {
+
+        flex-direction: column;
+        row-gap: 10px;
+
+    }
+
+    .i-do .info .item h4 {
+
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+
+    .portfolio .gallery .col {
+
+        width: 100%
+    }
+
+
+
+    .contact form .inputs input {
+
+        width: 100%;
+    }
+
+
+
+
+
+
+}
